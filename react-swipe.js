@@ -70,10 +70,10 @@
     },
 
     render: function() {
-      return React.createElement('div', React.__spread({}, this.props, {style: styles.container}),
-        React.createElement('div', {style: styles.wrapper},
+      return React.createElement('div', React.__spread({}, this.props, {className: 'swipe-container'}),
+        React.createElement('div', {className: 'swipe-wrapper'},
           React.Children.map(this.props.children, function (child) {
-            return React.addons.cloneWithProps(child, {style: styles.child});
+            return React.addons.cloneWithProps(child, {className: 'swipe-child'});
           })
         )
       );
